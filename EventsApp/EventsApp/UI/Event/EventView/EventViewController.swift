@@ -39,7 +39,14 @@ class EventViewController: UIViewController, EventViewProtocol, UISearchResultsU
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.tintColor = UIColor.orange
+        //searchController.searchBar.tintColor = UIColor.white
+        //searchController.searchBar.backgroundColor = UIColor.white
+        searchController.searchBar.searchTextField.textColor = UIColor.white
+        searchController.searchBar.setupSearchBar()
+
+        searchController.searchBar.barTintColor = UIColor(red: 56/255, green: 67/255, blue: 78/255, alpha: 1.0)
+
+        searchController.automaticallyShowsCancelButton = true
         return searchController
     }()
     
